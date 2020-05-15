@@ -96,41 +96,7 @@ class __TwigTemplate_5fb9fc4ffa4ae100044dd5db4c201f8d64002e3494b1431b202f9328074
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("home");
         echo "\">Home</a>
                         </li>
-                        ";
-        // line 40
-        if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 41
-            echo "                            <li class=\"nav-item active\">
-                                <a class=\"nav-link\" href=\"";
-            // line 42
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("post_index");
-            echo "\">Posts</a>
-                            </li>
-                            <li class=\"nav-item active\">
-                                <a class=\"nav-link\" href=\"";
-            // line 45
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
-            echo "\">Log Out</a>
-                            </li>
-                        ";
-        } else {
-            // line 48
-            echo "                            <li class=\"nav-item\">
-                                <a class=\"nav-link\" href=\"";
-            // line 49
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
-            echo "\">Sign Up</a>
-                            </li>
-                            <li class=\"nav-item\">
-                                <a class=\"nav-link\" href=\"";
-            // line 52
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-            echo "\">Log In</a>
-                            </li>
-                        ";
-        }
-        // line 55
-        echo "                    </ul>
+                    </ul>
                 </div>
             </div>
         </nav>
@@ -139,12 +105,12 @@ class __TwigTemplate_5fb9fc4ffa4ae100044dd5db4c201f8d64002e3494b1431b202f9328074
     <main role=\"main\" class=\"flex-shrink-0\">
         <div class=\"container\">
             ";
-        // line 63
+        // line 48
         $this->displayBlock('breadcrumbs', $context, $blocks);
-        // line 64
+        // line 49
         echo "            ";
         $this->displayBlock('body', $context, $blocks);
-        // line 65
+        // line 50
         echo "        </div>
     </main>
 
@@ -158,9 +124,9 @@ class __TwigTemplate_5fb9fc4ffa4ae100044dd5db4c201f8d64002e3494b1431b202f9328074
     <script src=\"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js\" crossorigin=\"anonymous\"></script>
     <script src=\"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js\" crossorigin=\"anonymous\"></script>
      ";
-        // line 77
+        // line 62
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 78
+        // line 63
         echo "    </body>
 </html>
 ";
@@ -209,7 +175,7 @@ class __TwigTemplate_5fb9fc4ffa4ae100044dd5db4c201f8d64002e3494b1431b202f9328074
 
     }
 
-    // line 63
+    // line 48
     public function block_breadcrumbs($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -227,7 +193,7 @@ class __TwigTemplate_5fb9fc4ffa4ae100044dd5db4c201f8d64002e3494b1431b202f9328074
 
     }
 
-    // line 64
+    // line 49
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -245,7 +211,7 @@ class __TwigTemplate_5fb9fc4ffa4ae100044dd5db4c201f8d64002e3494b1431b202f9328074
 
     }
 
-    // line 77
+    // line 62
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -275,7 +241,7 @@ class __TwigTemplate_5fb9fc4ffa4ae100044dd5db4c201f8d64002e3494b1431b202f9328074
 
     public function getDebugInfo()
     {
-        return array (  249 => 77,  231 => 64,  213 => 63,  195 => 24,  176 => 6,  164 => 78,  162 => 77,  148 => 65,  145 => 64,  143 => 63,  133 => 55,  127 => 52,  121 => 49,  118 => 48,  112 => 45,  106 => 42,  103 => 41,  101 => 40,  96 => 38,  86 => 31,  78 => 25,  76 => 24,  55 => 6,  48 => 1,);
+        return array (  215 => 62,  197 => 49,  179 => 48,  161 => 24,  142 => 6,  130 => 63,  128 => 62,  114 => 50,  111 => 49,  109 => 48,  96 => 38,  86 => 31,  78 => 25,  76 => 24,  55 => 6,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -319,21 +285,6 @@ class __TwigTemplate_5fb9fc4ffa4ae100044dd5db4c201f8d64002e3494b1431b202f9328074
                         <li class=\"nav-item active\">
                             <a class=\"nav-link\" href=\"{{ path('home') }}\">Home</a>
                         </li>
-                        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
-                            <li class=\"nav-item active\">
-                                <a class=\"nav-link\" href=\"{{ path('post_index') }}\">Posts</a>
-                            </li>
-                            <li class=\"nav-item active\">
-                                <a class=\"nav-link\" href=\"{{ path('app_logout') }}\">Log Out</a>
-                            </li>
-                        {% else %}
-                            <li class=\"nav-item\">
-                                <a class=\"nav-link\" href=\"{{ path('app_register') }}\">Sign Up</a>
-                            </li>
-                            <li class=\"nav-item\">
-                                <a class=\"nav-link\" href=\"{{ path('app_login') }}\">Log In</a>
-                            </li>
-                        {% endif %}
                     </ul>
                 </div>
             </div>
