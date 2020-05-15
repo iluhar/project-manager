@@ -9,7 +9,7 @@ services:
     depends_on:
       - manager-php-fpm
     ports:
-      - "8080:80"
+      - "8888:80"
   manager-php-fpm:
     build:
       context: ./manager/docker/development
@@ -30,9 +30,9 @@ services:
     environment:
       POSTGRES_USER: app
       POSTGRES_PASSWORD: secret
-      POSTGRES_DB: app
+      POSTGRES_DB: apps
     ports:
-      -  "54321:5432"
+      -  "12345:5432"
 
 volumes:
   manager-postgres:
